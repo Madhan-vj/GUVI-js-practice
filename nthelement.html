@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="num" type="number" placeholder="number" >
+        <input id ="btn1" type="button" value="insert">
+    </div>    
+    <div>
+        <input id="n" type="number" placeholder="nth element">
+        <input id ="btn2" type="button" value="display">
+    </div>
+    <script>
+        var result = document.createElement('div');
+        result.setAttribute('id','output');
+        document.body.appendChild(result);
+       
+        var arr=[];
+        var a = document.getElementById('num');
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', function getnthelement()
+        {   
+            arr.push(a.value);
+            // console.log(a.value);
+            a.value="";
+        }
+       )
+
+        
+       var b = document.getElementById('n');
+       var btn2 = document.getElementById('btn2');
+       btn2.addEventListener('click', function ()
+       {
+            // console.log(b.value);
+            result.innerHTML = arr[b.value];
+        })
+    </script>
+</body>
+</html>

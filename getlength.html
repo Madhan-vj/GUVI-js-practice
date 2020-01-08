@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="i" type="text" placeholder="text">
+    <input type="button" value="length" onclick="getlengthofword(document.getElementById('i').value)">
+    <script>
+        var output = document.createElement('div');
+        output.setAttribute('id','result');
+        document.body.appendChild(output);
+        function getlengthofword(name)
+        {
+            output.innerHTML = name.length;
+        }
+    </script>
+</body>
+</html>

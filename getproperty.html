@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="input" type="text" placeholder="number" >
+        <input id ="btn1" type="button" value="get">
+    </div> 
+    <script>
+        var result = document.createElement('div');
+        result.setAttribute('id','output');
+        document.body.appendChild(result);
+
+        var a = document.getElementById('input');
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', function (x)
+        {   var obj = {key:a.value};
+           result.innerHTML = obj.key;
+        })
+    </script>
+</body>
+</html>

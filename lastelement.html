@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id ="num" type="number" placeholder="array elements">
+        <input id ="btn" type="button" value="insert">
+        <input id ="bton" type="button" value="pop">
+    </div>
+    <script>
+        var a = document.createElement('div');
+        a.setAttribute('id','output');
+        document.body.appendChild(a);
+
+        var arr=[];
+        var b = document.getElementById('num');
+        var btn1 = document.getElementById('btn');
+        btn1.addEventListener('click', function getnthelement()
+        {   
+            arr.push(b.value);
+            console.log(b.value);
+            b.value="";
+        }
+       )
+
+       var btn2 = document.getElementById('bton');
+        btn2.addEventListener('click', function getnthelement()
+        {   
+            a.innerHTML = arr.pop();
+        }
+       )
+
+    </script>
+</body>
+</html>

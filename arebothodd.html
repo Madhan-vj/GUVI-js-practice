@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id ="a" type="number" placeholder="numbers">
+    <input id ="b" type="number" placeholder="numbers">
+    <input type="button" value="submit" onclick="fun((document.getElementById('a').value),(document.getElementById('b').value))">
+    <script>
+        var a = document.createElement('div');
+        a.setAttribute('id','result');
+        document.body.appendChild(a);
+        function fun(num1,num2)
+        {
+            if(num1%2==1 && num2%2==1)
+            {
+                a.innerHTML = "True";
+            }
+            else{
+                a.innerHTML = "false";
+            }
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id='firstname' type="text" placeholder="firstname">
+    <input id='secondname' type="text" placeholder="secondname">
+    <input type="button" value="check" onclick="issamelength(document.getElementById('firstname').value,document.getElementById('secondname').value)">
+    <script>
+        var result = document.createElement('div');
+        result.setAttribute('id','output');
+        document.body.appendChild(result);
+        function issamelength(name1,name2)
+        {
+            if(name1.length == name2.length)
+            {   
+                result.innerHTML = "True";
+            }
+            else{
+                result.innerHTML = "False";
+
+            }
+        }
+    </script>
+</body>
+</html>
